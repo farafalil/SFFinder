@@ -10,6 +10,7 @@ import SwiftUI
 
 // doing it this way means our icons will all have "copied" if we try to copy more than one
 // (not cool btw)
+// pleases remove this code from meeeee
 final class IconViewViewModel: ObservableObject {
 
     init(iconName: String) {
