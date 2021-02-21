@@ -11,6 +11,12 @@ struct ContentView: View {
     @State private var inputSearch = ""
     private var symbols = ["pencil", "scribble", "pencil.tip"]
     
+    var filteredSymbols: Array<String> {
+        return symbols.filter({
+            $0.range(of: inputSearch, options: .caseInsensitive) != nil
+        })
+    }
+    
     struct Symbol: View {
         var name: String
 
@@ -20,7 +26,7 @@ struct ContentView: View {
                 pasteboard.clearContents()
                 pasteboard.setString(name, forType: .string)
             }) {
-                VStack {
+                VStack() {
                     if #available(OSX 11.0, *) {
                         Image(systemName: name)
                     } else {
@@ -40,8 +46,14 @@ struct ContentView: View {
             .padding(.all, 10.0)
             
             Section {
-                ForEach(symbols, id: \.self) { symbol in
-                    Symbol(name: symbol)
+                if inputSearch.count > 0 {
+                    ForEach(filteredSymbols, id: \.self) { symbol in
+                        Symbol(name: symbol)
+                    }
+                } else {
+                    ForEach(symbols, id: \.self) { symbol in
+                        Symbol(name: symbol)
+                    }
                 }
             }
         }
