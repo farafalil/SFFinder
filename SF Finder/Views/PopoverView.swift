@@ -24,7 +24,7 @@ struct PopoverView: View {
         ScrollView(.vertical) {
             LazyVStack {
                 SearchBarView(inputSearch: $inputSearch)
-                
+                    .padding(.vertical, 4)
                 if viewModel.searchedSymbols.isEmpty {
                     Text("empty state view goes here")
                 } else {

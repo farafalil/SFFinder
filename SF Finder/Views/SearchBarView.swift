@@ -12,20 +12,23 @@ struct SearchBarView: View {
     @Binding var inputSearch: String
     
     var body: some View {
-        HStack {
-            TextField("Search Symbol...", text: $inputSearch)
-                .padding(8)
-                .cornerRadius(8)
-                .textFieldStyle(PlainTextFieldStyle())
-                .overlay(
-                    Button(action: {
+        TextField("Search Symbol...", text: $inputSearch)
+            .padding(9)
+            .cornerRadius(8)
+            .textFieldStyle(PlainTextFieldStyle())
+            .background(
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(Color.black.opacity(0.1))
+                    .padding(5)
+                    
+            )
+            .overlay(
+                Image(systemName: "xmark.circle.fill")
+                    .onTapGesture {
                         self.inputSearch = ""
-                    }) {
-                        Text("Clear")
                     }
+                    .opacity(self.inputSearch.count == 0 ? 0 : 1)
                     .padding(8)
-                    .disabled(self.inputSearch.count == 0)
-                    , alignment: .trailing)
-        }
+                ,alignment: .trailing)
     }
 }
