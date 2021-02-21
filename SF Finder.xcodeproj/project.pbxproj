@@ -13,6 +13,13 @@
 		A06683CF25E1D74E00E6B30E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06683CE25E1D74E00E6B30E /* Preview Assets.xcassets */; };
 		A06683D225E1D74E00E6B30E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06683D025E1D74E00E6B30E /* Main.storyboard */; };
 		A06683DC25E1D8A100E6B30E /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06683DB25E1D8A100E6B30E /* StatusBarController.swift */; };
+		B4406A3C25E2496400984F1A /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A3B25E2496400984F1A /* IconView.swift */; };
+		B4406A4225E24E9100984F1A /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A4125E24E9100984F1A /* PopoverView.swift */; };
+		B4406A4525E24E9E00984F1A /* IconGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A4425E24E9E00984F1A /* IconGridView.swift */; };
+		B4406A4925E252F400984F1A /* SymbolProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A4825E252F400984F1A /* SymbolProvider.swift */; };
+		B4406A4E25E2754D00984F1A /* thirteen.json in Resources */ = {isa = PBXBuildFile; fileRef = B4406A4D25E2754D00984F1A /* thirteen.json */; };
+		B4406A5125E2755F00984F1A /* fourteen.json in Resources */ = {isa = PBXBuildFile; fileRef = B4406A5025E2755F00984F1A /* fourteen.json */; };
+		B4406A5525E28EAD00984F1A /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A5425E28EAD00984F1A /* EmptyStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +32,13 @@
 		A06683D325E1D74E00E6B30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A06683D425E1D74E00E6B30E /* SF_Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SF_Finder.entitlements; sourceTree = "<group>"; };
 		A06683DB25E1D8A100E6B30E /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		B4406A3B25E2496400984F1A /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		B4406A4125E24E9100984F1A /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
+		B4406A4425E24E9E00984F1A /* IconGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGridView.swift; sourceTree = "<group>"; };
+		B4406A4825E252F400984F1A /* SymbolProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolProvider.swift; sourceTree = "<group>"; };
+		B4406A4D25E2754D00984F1A /* thirteen.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = thirteen.json; sourceTree = "<group>"; };
+		B4406A5025E2755F00984F1A /* fourteen.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fourteen.json; sourceTree = "<group>"; };
+		B4406A5425E28EAD00984F1A /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +71,9 @@
 		A06683C625E1D74A00E6B30E /* SF Finder */ = {
 			isa = PBXGroup;
 			children = (
+				B4406A4C25E2753100984F1A /* SymbolFiles */,
+				B4406A4725E252EA00984F1A /* Provider */,
+				B4406A3A25E2495200984F1A /* Views */,
 				A06683C725E1D74A00E6B30E /* AppDelegate.swift */,
 				A06683C925E1D74A00E6B30E /* ContentView.swift */,
 				A06683CB25E1D74E00E6B30E /* Assets.xcassets */,
@@ -75,6 +92,34 @@
 				A06683CE25E1D74E00E6B30E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4406A3A25E2495200984F1A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4406A3B25E2496400984F1A /* IconView.swift */,
+				B4406A4125E24E9100984F1A /* PopoverView.swift */,
+				B4406A4425E24E9E00984F1A /* IconGridView.swift */,
+				B4406A5425E28EAD00984F1A /* EmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4406A4725E252EA00984F1A /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				B4406A4825E252F400984F1A /* SymbolProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		B4406A4C25E2753100984F1A /* SymbolFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B4406A4D25E2754D00984F1A /* thirteen.json */,
+				B4406A5025E2755F00984F1A /* fourteen.json */,
+			);
+			path = SymbolFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +182,8 @@
 				A06683D225E1D74E00E6B30E /* Main.storyboard in Resources */,
 				A06683CF25E1D74E00E6B30E /* Preview Assets.xcassets in Resources */,
 				A06683CC25E1D74E00E6B30E /* Assets.xcassets in Resources */,
+				B4406A5125E2755F00984F1A /* fourteen.json in Resources */,
+				B4406A4E25E2754D00984F1A /* thirteen.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,8 +195,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06683CA25E1D74A00E6B30E /* ContentView.swift in Sources */,
+				B4406A3C25E2496400984F1A /* IconView.swift in Sources */,
+				B4406A5525E28EAD00984F1A /* EmptyStateView.swift in Sources */,
 				A06683DC25E1D8A100E6B30E /* StatusBarController.swift in Sources */,
+				B4406A4925E252F400984F1A /* SymbolProvider.swift in Sources */,
+				B4406A4225E24E9100984F1A /* PopoverView.swift in Sources */,
 				A06683C825E1D74A00E6B30E /* AppDelegate.swift in Sources */,
+				B4406A4525E24E9E00984F1A /* IconGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SF Finder/Preview Content\"";
-				DEVELOPMENT_TEAM = U4T667F3TC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SF Finder/Info.plist";
@@ -299,7 +351,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sadandbrazilian.SF-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -315,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"SF Finder/Preview Content\"";
-				DEVELOPMENT_TEAM = U4T667F3TC;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SF Finder/Info.plist";
@@ -323,7 +375,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.sadandbrazilian.SF-Finder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

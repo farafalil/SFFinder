@@ -11,9 +11,9 @@ import SwiftUI
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    #warning("TODO: Swap NSPopover implementation with NSView so we get that \"control center\" effect ")
     var popover = NSPopover.init()
     var statusBar: StatusBarController?
-
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
@@ -29,6 +29,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
