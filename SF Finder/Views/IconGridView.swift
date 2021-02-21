@@ -35,7 +35,7 @@ struct IconGridView: View {
         [grid item 100] [  grid item 127   ] [grid it]
     """)
     var gridLayout: [GridItem] = [
-        GridItem(.adaptive(minimum: 150, maximum: 300), spacing: 5)
+        GridItem(.adaptive(minimum: 100, maximum: 300), spacing: 5)
     ]
 }
 
@@ -50,7 +50,9 @@ struct IconGridView_Previews: PreviewProvider {
                               "folder.fill.badge.plus"]
 
     static var previews: some View {
-        IconGridView(symbols: .constant(symbolNames))
+        ScrollView {
+            IconGridView(symbols: .constant(symbolNames))
+        }
     }
 
 }
