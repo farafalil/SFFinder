@@ -18,11 +18,13 @@ final class PopoverViewModel: ObservableObject {
 struct PopoverView: View {
 
     @StateObject var viewModel: PopoverViewModel = .init()
+    @State var inputSearch = ""
 
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack {
-                Text("input textfield goes here")
+                SearchBarView(inputSearch: $inputSearch)
+                
                 if viewModel.searchedSymbols.isEmpty {
                     Text("empty state view goes here")
                 } else {

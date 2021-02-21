@@ -12,6 +12,7 @@
 		A06683CF25E1D74E00E6B30E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A06683CE25E1D74E00E6B30E /* Preview Assets.xcassets */; };
 		A06683D225E1D74E00E6B30E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06683D025E1D74E00E6B30E /* Main.storyboard */; };
 		A06683DC25E1D8A100E6B30E /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06683DB25E1D8A100E6B30E /* StatusBarController.swift */; };
+		A0D0792E25E29C86009A96C2 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D0792D25E29C86009A96C2 /* SearchBarView.swift */; };
 		B4406A3C25E2496400984F1A /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A3B25E2496400984F1A /* IconView.swift */; };
 		B4406A4225E24E9100984F1A /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A4125E24E9100984F1A /* PopoverView.swift */; };
 		B4406A4525E24E9E00984F1A /* IconGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4406A4425E24E9E00984F1A /* IconGridView.swift */; };
@@ -30,6 +31,7 @@
 		A06683D325E1D74E00E6B30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A06683D425E1D74E00E6B30E /* SF_Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SF_Finder.entitlements; sourceTree = "<group>"; };
 		A06683DB25E1D8A100E6B30E /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		A0D0792D25E29C86009A96C2 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		B4406A3B25E2496400984F1A /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		B4406A4125E24E9100984F1A /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		B4406A4425E24E9E00984F1A /* IconGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGridView.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				B4406A4125E24E9100984F1A /* PopoverView.swift */,
 				B4406A4425E24E9E00984F1A /* IconGridView.swift */,
 				B4406A5425E28EAD00984F1A /* EmptyStateView.swift */,
+				A0D0792D25E29C86009A96C2 /* SearchBarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				B4406A5525E28EAD00984F1A /* EmptyStateView.swift in Sources */,
 				A06683DC25E1D8A100E6B30E /* StatusBarController.swift in Sources */,
 				B4406A4925E252F400984F1A /* SymbolProvider.swift in Sources */,
+				A0D0792E25E29C86009A96C2 /* SearchBarView.swift in Sources */,
 				B4406A4225E24E9100984F1A /* PopoverView.swift in Sources */,
 				A06683C825E1D74A00E6B30E /* AppDelegate.swift in Sources */,
 				B4406A4525E24E9E00984F1A /* IconGridView.swift in Sources */,
