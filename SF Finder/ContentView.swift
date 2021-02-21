@@ -9,55 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var inputSearch = ""
-    private var symbols = ["pencil", "scribble", "pencil.tip"]
-    
-    var filteredSymbols: Array<String> {
-        return symbols.filter({
-            $0.range(of: inputSearch, options: .caseInsensitive) != nil
-        })
-    }
-    
-    struct Symbol: View {
-        var name: String
+    private var symbols = symbolNames
 
-        var body: some View {
-            Button(action: {
-                let pasteboard = NSPasteboard.general
-                pasteboard.clearContents()
-                pasteboard.setString(name, forType: .string)
-            }) {
-                VStack() {
-                    if #available(OSX 11.0, *) {
-                        Image(systemName: name)
-                    } else {
-                        // Fallback on earlier versions
-                    }
-                    Text(name)
-                }
-            }
-        }
-    }
-    
     var body: some View {
-        VStack {
-            Section {
-                TextField("Search", text: $inputSearch)
-            }
-            .padding(.all, 10.0)
-            
-            Section {
-                if inputSearch.count > 0 {
-                    ForEach(filteredSymbols, id: \.self) { symbol in
-                        Symbol(name: symbol)
+        ScrollView(.vertical) {
+            VStack {
+                Section {
+                    TextField("Search", text: $inputSearch)
+                }
+                .padding(.all)
+
+                Section {
+                    // we should have a different section for when $inputSearch.isEmpty
+                    LazyVGrid(columns: gridLayout, spacing: 10) {
+                        ForEach(symbols, id: \.self) { symbol in
+                            IconView(systemName: symbol)
+                        }
                     }
-                } else {
-                    ForEach(symbols, id: \.self) { symbol in
-                        Symbol(name: symbol)
-                    }
+                    .padding(.horizontal)
                 }
             }
         }
     }
+
+    var gridLayout: [GridItem] = [
+        GridItem(.adaptive(minimum: 150, maximum: 300), spacing: 5)
+    ]
 }
 
 
@@ -66,3 +43,11 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+let symbolNames = ["pencil",
+                   "arrow.left",
+                   "scribble",
+                   "pencil.tip",
+                   "square.and.pencil",
+                   "trash.fill",
+                   "folder.fill.badge.plus"]
