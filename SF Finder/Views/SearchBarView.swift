@@ -23,12 +23,18 @@ struct SearchBarView: View {
                     
             )
             .overlay(
-                Image(systemName: "xmark.circle.fill")
-                    .onTapGesture {
-                        self.inputSearch = ""
-                    }
-                    .opacity(self.inputSearch.count == 0 ? 0 : 1)
-                    .padding(8)
-                ,alignment: .trailing)
+                Button(action: {
+                    self.inputSearch = ""
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                }
+                .opacity(self.inputSearch.count == 0 ? 0 : 1)
+                .padding(8)
+                .buttonStyle(PlainButtonStyle())
+                .animation(.default)
+                ,alignment: .trailing
+            )
+               
+        
     }
 }
